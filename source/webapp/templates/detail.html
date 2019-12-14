@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block title %}Детальный просмотр{% endblock %}
 {% block content %}
     <div class="text-center">
@@ -30,5 +31,17 @@
             </div>
         {% endfor %}
     </div>
-
+    <form id="comment_form" class="d-inline">
+        <div class="form-group">
+            <input class="form-control" type="text" name="text" id="text_input" placeholder="Текст">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" name="author" id="author_input" placeholder="Автор">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="photo" name="photo" id="photo_input" placeholder="Фото">
+        </div>
+        <button type="submit" class="btn btn-primary mr-auto" id="form_submit">Отправить</button>
+    </form>
 {% endblock %}
+{% block scripts %}<script type="application/javascript" src="{% static "js/main.js" %}"></script>{% endblock %}

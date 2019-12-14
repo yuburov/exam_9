@@ -11,6 +11,6 @@ urlpatterns = [
     path('photos/create/', PhotoCreateView.as_view(), name='photo_create'),
     path('products/<int:pk>/update/', PhotoUpdateView.as_view(), name='photo_update'),
     path('products/<int:pk>/delete/', PhotoDeleteView.as_view(), name='photo_delete'),
-    path('login/', LoginView.as_view(), name='login'),
+    path('accounts/login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout')
 ]

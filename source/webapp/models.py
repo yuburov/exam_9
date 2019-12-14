@@ -11,6 +11,7 @@ class Photo(models.Model):
     likes = models.IntegerField(default=0, verbose_name='Количество лайков')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='photos', verbose_name='Автор')
 
+
     def __str__(self):
         return self.caption
 
@@ -30,4 +31,8 @@ class Comment(models.Model):
     class Meta:
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
+
+
+
+
 
