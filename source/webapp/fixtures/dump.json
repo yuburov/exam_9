@@ -1,0 +1,84 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$SNWG9gkoWHDR$eHowb1lHnEIJ/3FHxkZ2HK0r0tmqUszSjB4hDRH8dhE=",
+    "last_login": "2019-12-14T06:49:57.316Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-12-13T10:35:50.996Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "webapp.comment",
+  "pk": 1,
+  "fields": {
+    "text": "\u0441\u0438\u043c\u043f\u0430\u0442\u0438\u0447\u043d\u044b\u0439",
+    "photo": 1,
+    "author": 1,
+    "created_at": "2019-12-14T06:53:08.943Z"
+  }
+},
+{
+  "model": "webapp.comment",
+  "pk": 2,
+  "fields": {
+    "text": "test test",
+    "photo": 2,
+    "author": 1,
+    "created_at": "2019-12-14T06:55:51.438Z"
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 1,
+  "fields": {
+    "photo": "images/6adadbb0d6a4f4245e6a01d6c1ca6e4e_hjm8TkE.jpg",
+    "caption": "\u041a\u043e\u0442 \u0411\u0435\u0433\u0435\u043c\u043e\u0442!",
+    "created_at": "2019-12-14T06:52:08.029Z",
+    "likes": 0,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 2,
+  "fields": {
+    "photo": "images/471269553.jpg",
+    "caption": "test",
+    "created_at": "2019-12-14T06:55:20.912Z",
+    "likes": 0,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 3,
+  "fields": {
+    "photo": "images/606822074_fCzyiz0.jpg",
+    "caption": "\u0431\u043b\u0430\u0442\u043d\u043e\u0439 \u0447\u0443\u0432\u0430\u0447\u043e\u043a",
+    "created_at": "2019-12-14T07:49:59.163Z",
+    "likes": 0,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 4,
+  "fields": {
+    "photo": "images/54-Apparel.jpg",
+    "caption": "test 2",
+    "created_at": "2019-12-14T07:51:50.723Z",
+    "likes": 0,
+    "author": 1
+  }
+}
+]
