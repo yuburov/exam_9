@@ -18,10 +18,14 @@
                         <h5 class="card-title">{{ photo.caption }}</h5>
                         <a href="{% url 'webapp:photo_detail' photo.pk %}"
                            class="btn btn-primary btn-sm">Посмотреть</a>
+                         {% if perms.webapp.change_photo %}
                         <a href="{% url 'webapp:photo_update' photo.pk %}"
                            class="btn btn-primary btn-sm mt-2">Изменить</a>
+                        {% endif %}
+                        {% if perms.webapp.delete_photo %}
                          <a href="{% url 'webapp:photo_delete' photo.pk %}"
                            class="btn btn-primary btn-sm mt-2">Удалить</a>
+                        {% endif %}
                         <p class="mt-2"> Количество лайков: {{ photo.likes }}</p>
                     </div>
                 </div>

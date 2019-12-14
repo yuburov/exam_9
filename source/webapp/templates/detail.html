@@ -15,11 +15,17 @@
             </div>
         </div>
           <p class="mt-2"><b>Подпись:</b> {{ photo.caption }}</p>
+          <p class="mt-2"> Количество лайков: {{ photo.likes }}</p>
+          <p><a href="" class="btn btn-success" id="like">Лайк</a> <a href="" class="btn btn-success" id="dislike">Дислайк</a></p>
           <p class="mt-2"><b>Дата и время создания:</b> {{ photo.created_at }}</p>
+         {% if perms.webapp.change_photo %}
         <a href="{% url 'webapp:photo_update' photo.pk %}"
            class="btn btn-primary mt-2">Изменить</a>
+        {% endif %}
+        {% if perms.webapp.delete_photo %}
         <a href="{% url 'webapp:photo_delete' photo.pk %}"
            class="btn btn-primary mt-2">Удалить</a>
+        {% endif %}
     </div>
      <div class="comment-list">
       {{ reviews }}
@@ -28,6 +34,7 @@
                 <b>Автор - </b><a href="">{{ comment.author }}</a>
                 <p><b>Дата:</b> {{ comment.created_at }}</p>
                 <div class="pre"><b>Комментарий:</b> {{ comment.text }}</div>
+                <p><a href="#" class="btn btn-secondary" id="change_comment">Изменить</a> <a href="#" class="btn btn-success" id="delete_comment">Удалить</a></p>
             </div>
         {% endfor %}
     </div>
@@ -39,7 +46,7 @@
             <input class="form-control" type="text" name="author" id="author_input" placeholder="Автор">
         </div>
         <div class="form-group">
-            <input class="form-control" type="photo" name="photo" id="photo_input" placeholder="Фото">
+            <input class="form-control"  name="photo" id="photo_input" placeholder="Фото">
         </div>
         <button type="submit" class="btn btn-primary mr-auto" id="form_submit">Отправить</button>
     </form>

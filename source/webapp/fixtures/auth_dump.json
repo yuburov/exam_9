@@ -1,0 +1,62 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$SNWG9gkoWHDR$eHowb1lHnEIJ/3FHxkZ2HK0r0tmqUszSjB4hDRH8dhE=",
+    "last_login": "2019-12-14T14:22:18.678Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-12-13T10:35:50.996Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$FDZPEqu4ORlW$pJHZP9XZ/GOo4V7WJBa2+8a7MDg41LTXUXTamfD5+LQ=",
+    "last_login": "2019-12-14T14:08:00.459Z",
+    "is_superuser": false,
+    "username": "admin_admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-12-14T12:42:47Z",
+    "groups": [],
+    "user_permissions": [
+      [
+        "change_photo",
+        "webapp",
+        "photo"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$iIe21JdWpFEd$NZYHnSjkVcdLiUtToPSdAvWtrVVDCJNMZDGZJit7s9A=",
+    "last_login": "2019-12-14T14:21:54.066Z",
+    "is_superuser": false,
+    "username": "Mister_Black",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-12-14T14:21:07.802Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

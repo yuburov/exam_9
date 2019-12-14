@@ -33,6 +33,10 @@ class Comment(models.Model):
         verbose_name_plural = 'Комментарии'
 
 
-
+class Like(models.Model):
+    photo = models.ForeignKey('webapp.Photo', related_name='photo_author',
+                                  on_delete=models.CASCADE, verbose_name='Фото')
+    author = models.ForeignKey(User, related_name='author_photo',
+                                   on_delete=models.CASCADE, verbose_name='Автор лайка')
 
 

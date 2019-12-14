@@ -32,7 +32,7 @@ class PhotoCreateView(LoginRequiredMixin, CreateView):
         return reverse('webapp:index')
 
 
-class PhotoUpdateView(PermissionRequiredMixin, UserPassesTestMixin,UpdateView):
+class PhotoUpdateView(UserPassesTestMixin,UpdateView):
     model = Photo
     form_class = PhotoForm
     context_object_name = 'photo'
@@ -48,7 +48,7 @@ class PhotoUpdateView(PermissionRequiredMixin, UserPassesTestMixin,UpdateView):
     def get_success_url(self):
         return reverse('webapp:photo_detail', kwargs={'pk': self.object.pk})
 
-class PhotoDeleteView(PermissionRequiredMixin, UserPassesTestMixin, DeleteView):
+class PhotoDeleteView(UserPassesTestMixin, DeleteView):
     model = Photo
     context_object_name = 'photo'
     template_name = 'delete.html'
@@ -59,6 +59,7 @@ class PhotoDeleteView(PermissionRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         photo = self.get_object()
         return self.request.user == photo.author or self.request.user.is_superuser \
-               or self.request.user.has_perm('webapp.change_photo')
+              or self.request.user.has_perm('webapp.delete_photo')
+
 
 
